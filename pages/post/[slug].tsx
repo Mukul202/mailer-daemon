@@ -53,7 +53,7 @@ function PostPage({ post }: Props) {
       <img
         className="h-60 w-full object-cover"
         src={urlFor(post.mainImage).url()!}
-        alt=""
+        alt=""https://www.canva.com/design/DAE03bc1n1E/NQ4YTWv4YpjWoYILTksV1A/view?utm_content=DAE03bc1n1E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#28
       />
       <article className="mx-auto max-w-3xl p-5">
         <h1 className="mt-10 mb-3 text-3xl">{post.title}</h1>
