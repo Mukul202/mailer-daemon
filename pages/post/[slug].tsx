@@ -3,15 +3,15 @@ import Header from '../../Components/Header'
 import { sanityClient, urlFor } from '../../sanity'
 import { Post } from '../../typings'
 import PortableText from 'react-portable-text'
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler } from 'react-hook-form'
 import { useState } from 'react'
 import Head from 'next/head'
 
-interface IFormInput{
-  _id: string;
-  name: string;
-  email: string;
-  comment: string;
+interface IFormInput {
+  _id: string
+  name: string
+  email: string
+  comment: string
 }
 
 interface Props {
@@ -21,28 +21,30 @@ interface Props {
 function PostPage({ post }: Props) {
   // console.log(post);
 
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false)
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<IFormInput>();
+  } = useForm<IFormInput>()
 
-  const onSubmit:SubmitHandler<IFormInput> = (data) => {
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
     // console.log(data);
     fetch('/api/createComment', {
       method: 'POST',
-      body: JSON.stringify(data)
-    }).then(() => {
-      console.log(data);
-      setSubmitted(true);
-    }).catch(err => {
-      console.log(err);
-      setSubmitted(false);
+      body: JSON.stringify(data),
     })
-  };
-  
+      .then(() => {
+        console.log(data)
+        setSubmitted(true)
+      })
+      .catch((err) => {
+        console.log(err)
+        setSubmitted(false)
+      })
+  }
+
   return (
     <main>
       <Head>
@@ -53,7 +55,7 @@ function PostPage({ post }: Props) {
       <img
         className="h-60 w-full object-cover"
         src={urlFor(post.mainImage).url()!}
-        alt=""https://www.canva.com/design/DAE03bc1n1E/NQ4YTWv4YpjWoYILTksV1A/view?utm_content=DAE03bc1n1E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#28
+        alt=""
       />
       <article className="mx-auto max-w-3xl p-5">
         <h1 className="mt-10 mb-3 text-3xl">{post.title}</h1>
