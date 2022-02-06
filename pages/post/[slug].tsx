@@ -51,7 +51,7 @@ function PostPage({ post }: Props) {
       </Head>
       <Header />
       <img
-        className="h-40 w-full object-cover"
+        className="h-60 w-full object-cover"
         src={urlFor(post.mainImage).url()!}
         alt=""
       />
