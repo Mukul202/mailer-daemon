@@ -61,7 +61,7 @@ export default function Home({ posts }: Props) {
 
 export const getServerSideProps = async () => {
   //turns a homepage into server side rendering
-  const query =`*[_type == "post"]{
+  const query = `*[_type == "post"]| order(_createdAt desc){
     _id,
     title,
     author -> {
@@ -71,7 +71,7 @@ export const getServerSideProps = async () => {
       description,
       slug,
       mainImage
-  }`;
+  }`
 
   const posts = await sanityClient.fetch(query);
 
