@@ -13,7 +13,7 @@ export default function Home({ posts }: Props) {
   return (
     <div className="mx-auto max-w-7xl">
       <Head>
-        <title>Medium Blog</title>
+        <title>Mailer Daemon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
@@ -21,7 +21,7 @@ export default function Home({ posts }: Props) {
         <div className="space-y-5 px-10">
           <h1 className="max-w-xl font-serif text-6xl">
             <span className="underline decoration-black decoration-4">
-              Medium
+              Mailer Daemon
             </span>{' '}
             is a place to write,read, and connect
           </h1>
