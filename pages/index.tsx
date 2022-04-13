@@ -26,7 +26,7 @@ export default function Home({ posts }: Props) {
     </span>
     <span className={`${styles.cursor} box-border inline-block w-1 h-10  -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change`}></span>
   </h1>
-  <div className="text-xl  p-2  md:text-1.5xl">Student run newsletter of IIT(ISM) Dhanbad.</div>
+  <div className="text-xl  p-2  md:text-1.5xl">Student run media body of IIT(ISM) Dhanbad.</div>
 </header>
         
       </div>
