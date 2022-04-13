@@ -30,10 +30,10 @@ export default function Home({ posts }: Props) {
 </header>
         
       </div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[70vh] -left-40 opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[50vh] -left-40 opacity-80 blur-sm'></div>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[230vh] -right-40 opacity-80 blur-sm'></div>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[200vh] -left-40 mix-blend-multiply opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[100vh] -right-40 mix-blend-multiply opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[80vh] -right-40 mix-blend-multiply opacity-80 blur-sm'></div>
       {/* posts */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
         {posts.map(post => {
