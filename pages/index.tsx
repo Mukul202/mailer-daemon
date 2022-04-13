@@ -32,7 +32,7 @@ export default function Home({ posts }: Props) {
       </div>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[50vh] -left-32 opacity-80 blur-sm'></div>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[200vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[50vh] -right-32 opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[50vh] right-32 opacity-80 blur-sm'></div>
       {/* posts */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
         {posts.map(post => {
