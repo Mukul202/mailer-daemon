@@ -48,8 +48,8 @@ function PostPage({ post }: Props) {
   return (
     <main  className='relative overflow-clip'>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[70vh] -left-32 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[200vh] -right-40 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[80%] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[230vh] -right-40 opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[200vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
       <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[100vh] -right-20 mix-blend-multiply opacity-80 blur-sm'></div>
       {/* <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[50vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div> */}
       <Head>
