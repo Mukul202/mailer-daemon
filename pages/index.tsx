@@ -28,10 +28,6 @@ export default function Home({ posts }: Props) {
   </h1>
   <div className="text-xl  p-2  md:text-1.5xl">Student run newsletter of IIT(ISM) Dhanbad.</div>
 </header>
-        <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[70vh] -left-32 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[200vh] -right-40 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[230vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[100vh] -right-20 mix-blend-multiply opacity-80 blur-sm'></div>
         <img
           className="hidden h-32 md:inline-flex lg:h-full bg-inherit"
           src="https://cdn.iconscout.com/icon/premium/png-256-thumb/medium-3324353-2768644.png"
