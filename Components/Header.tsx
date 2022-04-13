@@ -10,7 +10,7 @@ function Header() {
             src="https://yt3.ggpht.com/ytc/AKedOLRjIye2rGzS3xHNLXgPw-4DjDverzaH5-0jScn6NA=s900-c-k-c0x00ffffff-no-rj"
             alt=""
           ></img>
-          <h1 className=' font-sans-serif text-0.5xl md:text-2xl px-2 cursor-pointer place-self-center'>Mailer Daemon</h1>
+          <h1 className="font-sans-serif text-0.5xl md:text-2xl px-2 cursor-pointer place-self-center">Mailer Daemon</h1>
           </div> 
         </Link>
         <p></p>  
