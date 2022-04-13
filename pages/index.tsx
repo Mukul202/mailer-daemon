@@ -17,7 +17,7 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex items-center justify-between border-y border-black bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-10 lg:py-0 mt-4 mb-5 text-white-400 hover:text-sky-400">
+      <div className="flex items-center justify-between border-y border-black bg-gradient-to-r from-green-400 to-blue-500 py-10 lg:py-0 mt-4 mb-5 text-white-400 hover:text-sky-400">
    
      <header className="mb-16 group">
   <h1 className="max-w-xl font-serif text-4xl md:text-6xl">
