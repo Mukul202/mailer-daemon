@@ -30,7 +30,7 @@ export default function Home({ posts }: Props) {
 </header>
         <img
           className="hidden h-32 md:inline-flex lg:h-full bg-inherit"
-          src="https://yt3.ggpht.com/ytc/AKedOLRjIye2rGzS3xHNLXgPw-4DjDverzaH5-0jScn6NA=s900-c-k-c0x00ffffff-no-rj"
+          src="https://media-exp1.licdn.com/dms/image/C511BAQHRdocWb5c3hg/company-background_10000/0/1519814703294?e=2147483647&v=beta&t=9AFwgSoTGfdRTUgvUHizlTO1nDOQ1dDTHKLfbJa89YA"
           alt=""
         />
       </div>
