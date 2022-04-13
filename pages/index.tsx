@@ -30,7 +30,7 @@ export default function Home({ posts }: Props) {
 </header>
         <img
           className="hidden h-32 md:inline-flex lg:h-full bg-inherit"
-          src="https://media-exp1.licdn.com/dms/image/C511BAQHRdocWb5c3hg/company-background_10000/0/1519814703294?e=2147483647&v=beta&t=9AFwgSoTGfdRTUgvUHizlTO1nDOQ1dDTHKLfbJa89YA"
+          src="https://image.winudf.com/v2/image1/Y29tLm1haWxlcmRhZW1vbi5hcHBfc2NyZWVuXzBfMTU4MDE4MzI5NV8wOTI/screen-0.jpg?fakeurl=1&type=.jpg"
           alt=""
         />
       </div>
