@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Header from '../Components/Header'
 import { sanityClient, urlFor } from "../sanity";
 import { Post } from "../typings";
-
+import styles from "./style.module.css"
 interface Props{
   posts: [Post];
 }
@@ -17,19 +17,18 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex items-center justify-between border-y border-black bg-yellow-400 py-10 lg:py-0">
-        <div className="space-y-5 px-10">
-          <h1 className="max-w-xl font-serif text-6xl">
-            <span className="underline decoration-black decoration-4">
-              Mailer Daemon
-            </span>{' '}
-            is a place to write,read, and connect
-          </h1>
-          <h2>
-            It's easy and free to post your thinking on any topic and connect
-            with millions of readers.
-          </h2>
-        </div>
+      <div className="flex items-center justify-between border-y border-black bg-yellow-400 py-10 lg:py-0 mt-4 mb-5">
+   
+     <header className="mb-16 group">
+  <h1 className="max-w-xl font-serif text-4xl md:text-6xl">
+    <span className="inline-flex h-20 pt-2 pl-2 overflow-x-hidden animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent will-change">
+      Mailer Daemon
+    </span>
+    <span className={`${styles.cursor} box-border inline-block w-1 h-10  -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change`}></span>
+  </h1>
+  <div className="text-xl  p-2  md:text-1.5xl"> It's easy and free to post your thinking on any topic and connect
+            with millions of readers.</div>
+</header>
         <img
           className="hidden h-32 md:inline-flex lg:h-full bg-inherit"
           src="https://cdn.iconscout.com/icon/premium/png-256-thumb/medium-3324353-2768644.png"
