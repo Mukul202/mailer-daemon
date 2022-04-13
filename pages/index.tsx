@@ -29,8 +29,8 @@ export default function Home({ posts }: Props) {
   <div className="text-xl  p-2  md:text-1.5xl">Student run newsletter of IIT(ISM) Dhanbad.</div>
 </header>
         <img
-          className="hidden h-32 md:inline-flex lg:h-full bg-inherit"
-          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/medium-3324353-2768644.png"
+          className="hidden h-32 md:inline-flex lg:h-32 bg-inherit"
+          src="https://image.winudf.com/v2/image1/Y29tLm1haWxlcmRhZW1vbi5hcHBfc2NyZWVuXzBfMTU4MDE4MzI5NV8wOTI/screen-0.jpg?fakeurl=1&type=.jpg"
           alt=""
         />
       </div>
