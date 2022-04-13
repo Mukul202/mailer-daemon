@@ -28,7 +28,7 @@ function Header() {
       </a>
       {/* </Link> */}
       <a href='https://www.iitism.ac.in/iitismnew/' target='_blank'>
-      <button type="button" className="text-gray-900 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">IIT-ISM</button>
+      <button type="button" className="text-gray-900 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">IIT-ISM</button>
       </a>
       </div>
     </header>
