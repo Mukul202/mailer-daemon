@@ -13,7 +13,7 @@ function Header() {
           <h1 className="font-sans-serif text-0.5xl md:text-2xl px-2 cursor-pointer place-self-center">Mailer Daemon</h1>
           </div> 
         </Link>
-<!--         <p></p>   -->
+        <p></p>  
         {/* <div className="hidden items-center space-x-5 md:inline-flex">
           <h3>About</h3>
           <h3>Contact</h3>
