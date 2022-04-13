@@ -28,11 +28,7 @@ export default function Home({ posts }: Props) {
   </h1>
   <div className="text-xl  p-2  md:text-1.5xl">Student run newsletter of IIT(ISM) Dhanbad.</div>
 </header>
-<!--         <img
-          className="hidden h-32 md:inline-flex lg:h-32 bg-inherit"
-          src="https://image.winudf.com/v2/image1/Y29tLm1haWxlcmRhZW1vbi5hcHBfc2NyZWVuXzBfMTU4MDE4MzI5NV8wOTI/screen-0.jpg?fakeurl=1&type=.jpg"
-          alt=""
-        /> -->
+        
       </div>
       {/* posts */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
