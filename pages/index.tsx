@@ -17,7 +17,7 @@ const divStyle={
   transform:"translate('-50%,-50%')",
   // width:'auto',
   padding:'40px 3px',
-  textAlign:'center' as 'center',
+  textAlign:'center' as const,
   borderTopLeftRadius:'70px',
   borderBottomRightRadius:'70px',
   // backgroundColor:"rgba(0,0,0,0.3)",
