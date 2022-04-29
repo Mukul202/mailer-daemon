@@ -47,10 +47,10 @@ function PostPage({ post }: Props) {
 
   return (
     <main  className='relative overflow-clip'>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[70vh] -left-32 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[230vh] -right-40 opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[200vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
-      <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[100vh] -right-20 mix-blend-multiply opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-purple-500 rounded-full top-[130vh] -left-32 opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-gray-500 rounded-full top-[260vh] -right-40 opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[230vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div>
+      <div className='hidden md:inline-block absolute w-72 h-72 bg-pink-300 rounded-full top-[160vh] -right-20 mix-blend-multiply opacity-80 blur-sm'></div>
       {/* <div className='hidden md:inline-block absolute w-72 h-72 bg-orange-500 rounded-full top-[50vh] -left-28 mix-blend-multiply opacity-80 blur-sm'></div> */}
       <Head>
         <title>{post.title}</title>
@@ -58,7 +58,7 @@ function PostPage({ post }: Props) {
       </Head>
       <Header />
       <img
-        className="h-60 w-full object-cover"
+        className="h-screen w-full object-cover"
         src={urlFor(post.mainImage).url()!}
         alt=""
       />
@@ -81,7 +81,7 @@ function PostPage({ post }: Props) {
           <PortableText
             className=""
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET! || "production"}
-            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID! || "8cdj48ib"}
             content={post.body}
             serializers={{
               h1: (props: any) => (

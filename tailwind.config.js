@@ -25,6 +25,10 @@ module.exports = {
           '95%': { width: '11.5ch' },
         },
       },
+      backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
     },
   },
   plugins: [],
