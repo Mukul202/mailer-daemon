@@ -1,67 +1,118 @@
-import React from "react";
-import {BsList } from "react-icons/bs";
-import Link from 'next/link'
- function Header() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
-  return (
-    <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-5 text-black">
-        <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
-          <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
-           <Link href="/"> 
-           <div
-              className="inline-block py-2 mr-4 font-serif text-2xl font-bold leading-relaxed uppercase whitespace-nowrap cursor-pointer"
-            >
-              Mailer Daemon
-            </div>
-            </Link>
-            <button
-              className="block px-3 py-1 text-xl leading-none bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              <BsList />
-            </button>
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-            id="example-navbar-danger"
-          >
-            <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
-              <li className="nav-item">
-                <a
-                  className="flex items-center px-3 py-2 text-sm font-bold leading-snug uppercase hover:opacity-75"
-                  href="https://placementor-2021.herokuapp.com/"
-                >
-                  <i className="text-lg opacity-75 fab fa-facebook-square leading-lg"></i><span className="ml-2">Placementor</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="flex items-center px-3 py-2 text-sm font-bold leading-snug uppercase hover:opacity-75"
-                  href="https://www.iitism.ac.in/iitismnew/"
-                >
-                  <i className="text-lg opacity-75 fab fa-twitter leading-lg"></i><span className="ml-2">IIT ISM </span>
-                </a>
-              </li>
-              {/* <li className="nav-item">
-                <a
-                  className="flex items-center px-3 py-2 font-bold leading-snug uppercase text-smrdeszdsz hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="text-lg opacity-75 fab fa-pinterest leading-lg"></i><span className="ml-2">Signing Off</span>
-                </a>
-              </li> */}
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
-  );
-}
-  
+import Head from 'next/head'
+import Link from 'next/link';
+// import Carousels from '../Components/Carousels';
+import Header from '../Components/Header'
+import Typed from "react-typed";
+import { sanityClient, urlFor } from "../sanity";
+import { Post } from "../typings";
+import styles from "./style.module.css"
 
-    export default Header;
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+
+interface Props{
+  posts: [Post];
+}
+
+const getConfigurableProps = () => ({
+  showArrows: false,
+  showStatus:false, 
+  showIndicators: true,
+  infiniteLoop:true,
+  showThumbs:false,
+  useKeyboardArrows: false,
+  autoPlay: true,
+  stopOnHover: true,
+  swipeable: true
+
+});
+
+
+
+export default function Home({ posts }: Props) {
+
+  return (
+    <div className="mx-auto mt-0 max-w-10xl">
+      <Head>
+        <title>Mailer Daemon</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      
+      <div className="flex items-center justify-center h-screen py-10 mt-0 mb-5 lg:py-0 text-white-400">
+      <img className="object-cover w-screen h-screen contrast-100 blur-lg" src="https://images.shiksha.com/mediadata/images/articles/1635919891phpErjqCl.jpeg" />
+   
+      <header  className="absolute w-full px-20 py-10 mb-16 font-bold text-center bg-white rounded-md bg-opacity-30 group z-5 md:w-3/4 lg:w-1/2">
+     <h1 className="max-w-xl font-serif text-3xl md:text-6xl ml-[5%] text-center ">
+       
+        <Typed
+        className="text-right"
+            strings={["Mailer Daemon"]}
+            typeSpeed={80}
+            backSpeed={80}
+            loop
+          />
+          </h1>
+     <div className="text-xl  p-2  md:text-1.5xl font-extrabold ">Student run media body of IIT(ISM) Dhanbad.</div>
+      </header>
+      </div>
+    <div className='py-28'>
+     <Carousel {...getConfigurableProps()}>
+     {posts.filter((post,idx)=>{
+       if(idx<8) return post
+     }).map((post,idx) => {
+       
+            return <div className='pt-1 pb-10 m-auto my-10 mt-10 border-4 border-black w-[25rem] h-80 rounded-2xl'>
+              <img className='object-cover w-full h-full blur-[1px]' src={urlFor(post.mainImage).url()!}></img>
+              <h1 className='p-2 font-bold'>{post.title}</h1>
+              </div>
+                })}
+     </Carousel>
+     </div>
+      {/* posts */}
+      <div className="grid grid-cols-1 gap-3 p-2 md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6">
+        {posts.map(post => {
+          return (
+            <Link key={post._id} href={`/post/${post.slug.current}`}>
+              <div className="overflow-hidden border rounded-lg cursor-pointer group">
+                <img className="object-cover w-full transition-transform duration-200 ease-in-out h-60 group-hover:scale-105" src={urlFor(post.mainImage).url()!} alt="" />
+                <div className="flex justify-between p-5 bg-white">
+                  <div>
+                    <p className="text-lg font-bold">{post.title}</p>
+                    <p className="text-xs">{post.description} by {post.author.name}</p>
+                  </div>
+                  <img className="w-12 h-12 rounded-full" src={urlFor(post.author.image).url()!} alt="" />
+                </div>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+export const getServerSideProps = async () => {
+  //turns a homepage into server side rendering
+  const query = `*[_type == "post"]| order(_createdAt desc){
+    _id,
+    title,
+    author -> {
+      name,
+      image
+    },
+      description,
+      slug,
+      mainImage
+  }`
+
+  const posts = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      posts,
+    },
+  }
+
+}
