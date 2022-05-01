@@ -57,18 +57,19 @@ export default function Home({ posts }: Props) {
      <div className="text-xl  p-2  md:text-1.5xl font-extrabold ">Student run media body of IIT(ISM) Dhanbad.</div>
       </header>
       </div>
-
+    <div className='py-28'>
      <Carousel {...getConfigurableProps()}>
      {posts.filter((post,idx)=>{
        if(idx<8) return post
      }).map((post,idx) => {
        
-            return <div className='p-10 m-auto my-10 mt-10 border-4 border-black w-80 h-80 rounded-2xl'>
+            return <div className='pt-1 pb-10 m-auto my-10 mt-10 border-4 border-black w-[25rem] h-80 rounded-2xl'>
               <img className='object-cover w-full h-full blur-[1px]' src={urlFor(post.mainImage).url()!}></img>
               <h1 className='p-2 font-bold'>{post.title}</h1>
               </div>
                 })}
      </Carousel>
+     </div>
       {/* posts */}
       <div className="grid grid-cols-1 gap-3 p-2 md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6">
         {posts.map(post => {
