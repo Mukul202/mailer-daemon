@@ -10,7 +10,7 @@ import Link from 'next/link'
           <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
            <Link href="/"> 
            <div
-              className="inline-block py-2 mr-4 font-serif text-2xl font-bold leading-relaxed uppercase whitespace-nowrap"
+              className="inline-block py-2 mr-4 font-serif text-2xl font-bold leading-relaxed uppercase whitespace-nowrap cursor-pointer"
             >
               Mailer Daemon
             </div>
