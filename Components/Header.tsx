@@ -1,5 +1,6 @@
 import React from "react";
 import {BsList } from "react-icons/bs";
+import Link from 'next/link'
  function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -7,12 +8,13 @@ import {BsList } from "react-icons/bs";
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-5 text-black">
         <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
           <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
-            <a
+           <Link href="/"> 
+           <div
               className="inline-block py-2 mr-4 font-serif text-2xl font-bold leading-relaxed uppercase whitespace-nowrap"
-              href="/"
             >
               Mailer Daemon
-            </a>
+            </div>
+            </Link>
             <button
               className="block px-3 py-1 text-xl leading-none bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
               type="button"
