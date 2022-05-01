@@ -19,7 +19,7 @@ interface Props {
 }
 
 function PostPage({ post }: Props) {
-  // console.log(post);
+  console.log(post);
 
   const [submitted, setSubmitted] = useState(false)
 
