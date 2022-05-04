@@ -34,7 +34,7 @@ import Link from 'next/link'
               <li className="nav-item">
                 <a
                   className="flex items-center px-3 py-2 text-sm font-bold leading-snug uppercase hover:opacity-75"
-                  href="https://placementor-2021.herokuapp.com/"
+                  href="https://placementor-2021.herokuapp.com/" target="_blank"
                 >
                   <i className="text-lg opacity-75 fab fa-facebook-square leading-lg"></i><span className="ml-2">Placementor</span>
                 </a>
@@ -42,7 +42,7 @@ import Link from 'next/link'
               <li className="nav-item">
                 <a
                   className="flex items-center px-3 py-2 text-sm font-bold leading-snug uppercase hover:opacity-75"
-                  href="https://www.iitism.ac.in/iitismnew/"
+                  href="https://www.iitism.ac.in/iitismnew/" target="_blank"
                 >
                   <i className="text-lg opacity-75 fab fa-twitter leading-lg"></i><span className="ml-2">IIT ISM </span>
                 </a>
