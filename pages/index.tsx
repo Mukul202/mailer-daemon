@@ -66,7 +66,7 @@ export default function Home({ posts }: Props) {
             return (
               <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className='pt-1 pb-10 m-auto my-10 mt-10 border-4 border-black w-[25rem] h-80 rounded-2xl cursor-pointer'>
-              <img className='object-cover w-full h-full blur-[1px]' src={urlFor(post.mainImage).url()!}></img>
+              <img className='object-cover w-full h-full' src={urlFor(post.mainImage).url()!}></img>
               <h1 className='p-2 font-bold'>{post.title}</h1>
               </div>
               </Link>
