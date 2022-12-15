@@ -34,7 +34,7 @@ import Link from 'next/link'
               <li className="nav-item">
                 <a
                   className="flex items-center px-3 py-2 text-sm font-bold leading-snug uppercase hover:opacity-75"
-                  href="https://placementor-iit-dhanbad.herokuapp.com/" target="_blank"
+                  href="https://placementor-iit-dhanbad.onrender.com" target="_blank"
                 >
                   <i className="text-lg opacity-75 fab fa-facebook-square leading-lg"></i><span className="ml-2">Placementor</span>
                 </a>
