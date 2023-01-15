@@ -41,7 +41,7 @@ export default function Home({ posts }: Props) {
       <Header />
       
       <div className="flex items-center justify-center h-screen py-10 mt-0 mb-5 lg:py-0 text-white-400">
-      <img className="object-cover w-screen h-screen contrast-100 blur-sm" src="/heritage_building.jpeg" />
+      <img className="object-cover w-screen h-screen contrast-100 blur-md" src="/heritage_building.jpeg" />
    
       <header  className="absolute w-full px-20 py-10 mb-16 font-bold text-center bg-white rounded-md bg-opacity-30 group z-5 md:w-3/4 lg:w-1/2">
      <h1 className="max-w-xl font-serif text-3xl md:text-6xl ml-[5%] text-center ">
